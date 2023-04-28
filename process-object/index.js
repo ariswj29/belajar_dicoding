@@ -12,9 +12,11 @@ console.log(`Hai, ${yourName}`);
 console.log(`Mode environment: ${environment}`)
 console.log(`Penggunaan memori dari ${initialMemoryUsage} naik ke ${currentMemoryUsage}`);
 
-// const cpuInformation = process.memoryUsage();
+const cpuInformation = process.memoryUsage();
  
-// console.log(cpuInformation);
+console.log(cpuInformation);
 
 
 // SET NODE_ENV=development && node ./process-object/index.js <Nama Anda> 
+
+
