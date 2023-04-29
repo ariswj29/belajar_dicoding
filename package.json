@@ -1,0 +1,12 @@
+{
+  "name": "belajar_dicoding",
+  "version": "1.0.0",
+  "description": "nitip di github",
+  "main": "index.js",
+  "scripts": {
+    "start": "node nodejs-web-server/todo_request_method_url.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
