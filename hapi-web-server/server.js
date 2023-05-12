@@ -8,7 +8,28 @@ const init = async () => {
         host: 'localhost',
     });
 
-    server.route(todoRoutes);
+    // server.route(todoRoutes);
+    server.route(
+        {
+            method: 'GET',
+            path: '/',
+            // Detailed notation
+            handler: (request, h) => {
+                const response = h.response('success');
+                response.type('text/plain');
+                response.header('X-Custom', 'some-value');
+                return response;
+            }
+        },
+        {
+            method: 'POST',
+            path: ' http://notesapp-v1.dicodingacademy.com/notes/notes',
+            handler: (request, h)=>{
+                const {body, tags, title} = request.payload;
+                return `Selamat datang ${body}!`;
+            }
+        }
+    )
 
  
     await server.start();
